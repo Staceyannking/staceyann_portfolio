@@ -3,6 +3,10 @@
     <head>
         <title>My prortfolio</title>
         <link rel="stylesheet" href="css/style.css"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Space+Mono&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
     </head>
     <body>
 
@@ -21,61 +25,84 @@
             <article>
                 <div class="title">
                     
-                    <h1>Creative Develpoer</h1>
+                    <h1>Staceyann King</h1>
 
                 </div>
                 <div class="description">
                     
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+                    <p>I'm a tech enthusiast with a passion for solving real-world challenges. As a self-motivated professional, I seek opportunities with companies that inspire and empower individuals to make a positive impact. I thrive on continuous learning, enjoy diverse interests, and am eager to contribute to meaningful projects</p>
 
                 </div>
                 
             </article>
         </section>
 
-        <section id="services" class="service">
+        <section id="services" class="service service-html sticky">
             <article>
                 <figure>
                     <img src="img/diamond.png" width="200"/>
                 </figure>
                 <div class="text">
-                    <h2>HTML</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                    <a href="https://www.google.com"> More about HTML</a>
+                    <h2> RecyClique</h2>
+                    <p>Recyclique is a platform in which individuals can create or join events centered around recycling. Through resource sharing, information dissemination and community building, our app empowers users to make a difference in their communities and on the environment.</p>
+                    <a href="https://recyclique.onrender.com"> More about RecyClique</a>
                 </div>
             </article>
         </section>
         
-        <section class="service"> 
+        <section class="service service-css sticky"> 
             <article>
                 <figure>
                     <img src="img/triangle.png" width="200"/>
                 </figure>
                 <div class="text">
-                    <h2>CSS</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                    <a href="https://www.google.com"> More about CSS</a>
+                    <h2>FinWise</h2>
+                    <p>FineWise is to empower individuals with the knowledge and tools to make informed financial decisions. Combining the powers of computing with financial data to make financial literacy accessible to all.</p>
+                    <a href="https://finwises.github.io/Fin-wise/"> More about FinWise</a>
                 </div>
             </article>
         </section>
-        <section class="service">
+        <section class="service service-js sticky">
             <article>
                 <figure>
                     <img src="img/octagon.png" width="200"/>
                 </figure>
                 <div class="text">
-                    <h2>JS</h2>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.</p>
-                    <a href="https://www.google.com"> More about JS</a>
+                    <h2>AstroWave</h2>
+                    <p>AstroWave: A space adventure that challenges and excites users to guide Benjamin to a planet where he can roast his marshmallows!</p>
+                    <a href="https://astro-wave.github.io/AstroWave-Kaboom/"> More about AstroWave</a>
                 </div>
             </article>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="contact full-screen">
            
-            <a href="mailto:qG1JN@example.com">qG1JN@example.com</a>
+            <a href="mailto:staceyannking01@gmail.com">staceyannking01@gmail.com</a>
 
         </section>
+
+        <script>
+            let emptyElement = document.querySelector(".about .empty");
+            let titleElement = document.querySelector(".about .title");
+            let figureElements = document.querySelectorAll(".service figure");
+
+            // figureElements.forEach(function (element) {
+            //     element.style.background = "blue";
+            // });
+
+            window.addEventListener('mousemove', handleMouseMove);
+
+            function handleMouseMove(event) {
+                emptyElement.style.flexBasis = event.clientX + "px";
+                titleElement.style.flexBasis = event.clientY / 2 + "px";
+
+                figureElements.forEach(function (element) {
+                element.style.flexBasis = (window.innerWidth - event.clientX) + "px";
+            });
+            }
+
+            console.log(empty);
+        </script>
 
     </body>
 </html>
